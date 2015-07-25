@@ -7,7 +7,7 @@ from dewar.app import create_app
 
 app_root = os.path.dirname(os.path.abspath(__name__))
 
-application = create_app('dewar', os.path.join(app_root, 'development.conf'))
+application = create_app('dewar')
 server = Server()
 manager = Manager(application)
 manager.add_command('runserver', server)

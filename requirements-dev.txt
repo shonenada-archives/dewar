@@ -6,5 +6,6 @@
 #
 click==4.1                # via pip-tools
 first==2.0.1              # via pip-tools
+honcho==0.6.6
 pip-tools==1.0.5
 six==1.9.0                # via pip-tools
