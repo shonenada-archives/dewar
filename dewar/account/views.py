@@ -1,25 +1,21 @@
 # -*- coding: utf-8 -*-
-from flask import Blueprint
+from flask import Blueprint, render_template, url_for, redirect
 
 
-account_app = Blueprint(__name__, 'account', url_prefix='/account')
-
-
-@account_app.route('')
-def index():
-    pass
+account_app = Blueprint('account', __name__, wrl_prefix='/account',
+                        template_folder='templates')
 
 
 @account_app.route('/signin', methods=['GET', 'POST'])
 def signin():
-    pass
+    return render_template('account/signin.html')
 
 
 @account_app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    pass
+    return render_template('account/signup.html')
 
 
 @account_app.route('/signout', methods=['POST'])
 def signout():
-    pass
+    return redirect(url_for('home.index'))
