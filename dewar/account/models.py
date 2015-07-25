@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
 
-from flask.ext.login import ModelMixin
+from flask.ext.login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from dewar.exts import db
 
 
-class Account(db.Model, ModelMixin):
+class Account(db.Model, UserMixin):
 
     __tablename__ = 'account'
 
