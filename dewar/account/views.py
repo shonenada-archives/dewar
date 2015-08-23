@@ -2,7 +2,7 @@
 from flask import Blueprint, render_template, url_for, redirect
 
 
-account_app = Blueprint('account', __name__, wrl_prefix='/account',
+account_app = Blueprint('account', __name__, url_prefix='/account',
                         template_folder='templates')
 
 
